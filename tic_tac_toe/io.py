@@ -23,6 +23,18 @@ import os
 
 QUIT_STRINGS = ['quit', 'exit', 'bye']
 
+def inputPlayerLetter():
+  letter = ''
+  while not (letter == 'X' or letter == 'O'):
+    print 'Do you want to be X or O?'
+    print 'Please select jut a valid option (X or O)'
+    letter = raw_input().upper()
+    
+  if letter == 'X':
+    return ['X','O']
+  else:
+    return ['O','X']
+
 def _print_file(filename):
   try:
     f = open(filename, "r")
