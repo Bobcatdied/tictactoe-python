@@ -24,11 +24,12 @@ from tic_tac_toe.game import Game, GameTied, InvalidMove
 from tic_tac_toe.player import Player
 from tic_tac_toe.ai_player import AIPlayer
 from tic_tac_toe import io
-import sys
+import sys, os
 
 # Initialize objects
 game = Game(3)
-players = [Player('X'), AIPlayer('O')]
+playerLetter,aiLetter = io.inputPlayerLetter()
+players = [Player(playerLetter), AIPlayer(aiLetter)]
 playing = True # Main loop control needed to break out of multiple levels
 io.init()
 
